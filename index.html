@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type = "text/javascript" src="data.js"></script>  
+    <script type = "text/javascript" src="script.js"></script>  
+    <link rel="icon" type="image/x-icon" href="./ydkjfs.ico">
+    <title>Jackparty Game Finder</title>
+</head>
+<body onload="getGameList()">
+
+    <div id ="banner">
+      <input id="nameInput"type="text" placeholder="Game" onchange="getGameList()">
+      <select id="minInput" onchange="getGameList()">
+          <option value=999>Min Player Amount</option>
+          <option value=2>Exactly 1</option>
+          <option value=2>2 or less</option>
+          <option value=3>3 or less</option>
+          <option value=4>4 or less</option>
+          <option value=999>4 or more</option>
+      </select>  
+      <select id="maxInput" onchange="getGameList()">
+          <option value=999>Max Player Amount</option>
+          <option value=4>6</option>
+          <option value=8>8</option>
+          <option value=10>10</option>
+          <option value=16>16</option>
+          <option value=100>100</option>
+      </select>
+  
+      <div class="pack">
+          <label>Jack Party Packs</label></br>
+          <div>
+            <input type="checkbox" id="jp1" onchange="getGameList()" checked value=1>Party 1</input>
+            <input type="checkbox" id="jp2" onchange="getGameList()" checked value=2>Party 2</input>
+            <input type="checkbox" id="jp3" onchange="getGameList()" checked value=3>Party 3</input>
+          </div>
+          <div>
+            <input type="checkbox" id="jp4" onchange="getGameList()" checked value=4>Party 4</input>
+            <input type="checkbox" id="jp5" onchange="getGameList()" checked value=5>Party 5</input>
+            <input type="checkbox" id="jp6" onchange="getGameList()" checked value=6>Party 6</input>
+          </div> 
+          <div>
+            <input type="checkbox" id="jp7" onchange="getGameList()" checked value=7>Party 7</input>
+            <input type="checkbox" id="jp8" onchange="getGameList()" checked value=8>Party 8</input>
+            <input type="checkbox" id="jp9" onchange="getGameList()" checked value=9>Party 9</input>
+          </div> 
+      
+          
+      </div>
+    </div>
+
+      <table id ="gamelist">
+      </table>
+</body>
+</html>
+
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+#banner{
+  /*Banner color*/
+}
+input[type=text], select,.pack {
+  width: 22%;
+  height: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.pack{
+  width: fit-content;
+}
+
+#PackSelector {
+  max-width: fit-content;
+  padding: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+</style>
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type = "text/javascript" src="data.js"></script>  
+    <script type = "text/javascript" src="script.js"></script>  
+    <link rel="icon" type="image/x-icon" href="./ydkjfs.ico">
+    <title>Jackparty Game Finder</title>
+</head>
+<body onload="getGameList()">
+    <input id="nameInput"type="text" placeholder="Game" onchange="getGameList()">
+    <select id="packInput" onchange="getGameList()">
+        <option value=0>All Packs selected</option>
+        <option value=1>Pack 1</option>
+        <option value=2>Pack 2</option>
+        <option value=3>Pack 3</option>
+        <option value=4>Pack 4</option>
+        <option value=5>Pack 5</option>
+        <option value=6>Pack 6</option>
+        <option value=7>Pack 7</option>
+        <option value=8>Pack 8</option>
+    </select>
+    <select id="minInput" onchange="getGameList()">
+        <option value=999>Min Player Amount</option>
+        <option value=2>Exactly 1</option>
+        <option value=2>2 or less</option>
+        <option value=3>3 or less</option>
+        <option value=4>4 or less</option>
+        <option value=999>4 or more</option>
+    </select>  
+    <select id="maxInput" onchange="getGameList()">
+        <option value=999>Max Player Amount</option>
+        <option value=4>6</option>
+        <option value=8>8</option>
+        <option value=10>10</option>
+        <option value=16>16</option>
+        <option value=100>100</option>
+    </select>
+    <table id ="gamelist">
+    </table>
+</body>
+</html>
+
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+input[type=text], select {
+  width: 24.5%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+</style>-->
