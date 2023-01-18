@@ -11,26 +11,9 @@
 </head>
 <body onload="getGameList()">
 
-    <div id ="banner">
-      <input id="nameInput"type="text" placeholder="Game" onchange="getGameList()">
-      <select id="minInput" onchange="getGameList()">
-          <option value=999>Min Player Amount</option>
-          <option value=2>Exactly 1</option>
-          <option value=2>2 or less</option>
-          <option value=3>3 or less</option>
-          <option value=4>4 or less</option>
-          <option value=999>4 or more</option>
-      </select>  
-      <select id="maxInput" onchange="getGameList()">
-          <option value=999>Max Player Amount</option>
-          <option value=4>6</option>
-          <option value=8>8</option>
-          <option value=10>10</option>
-          <option value=16>16</option>
-          <option value=100>100</option>
-      </select>
-  
-      <div class="pack">
+    <div class ="wrapper">
+      <div class="packs">
+        <div>
           <label>Jack Party Packs</label></br>
           <div>
             <input type="checkbox" id="jp1" onchange="getGameList()" checked value=1>Party 1</input>
@@ -46,10 +29,33 @@
             <input type="checkbox" id="jp7" onchange="getGameList()" checked value=7>Party 7</input>
             <input type="checkbox" id="jp8" onchange="getGameList()" checked value=8>Party 8</input>
             <input type="checkbox" id="jp9" onchange="getGameList()" checked value=9>Party 9</input>
-          </div> 
-      
-          
+          </div>
+        </div>
+
       </div>
+      <div class="inputs">
+        <div>
+          <input id="nameInput"type="text" placeholder="Game" onchange="getGameList()">
+          <select  id="minInput" onchange="getGameList()">
+              <option value=999>Min Player Amount</option>
+              <option value=2>Exactly 1</option>
+              <option value=2>2 or less</option>
+              <option value=3>3 or less</option>
+              <option value=4>4 or less</option>
+              <option value=999>4 or more</option>
+          </select>  
+          <select  id="maxInput" onchange="getGameList()">
+              <option value=999>Max Player Amount</option>
+              <option value=4>6</option>
+              <option value=8>8</option>
+              <option value=10>10</option>
+              <option value=16>16</option>
+              <option value=100>100</option>
+          </select>
+        </div>
+      </div>
+      
+
     </div>
 
       <table class="styled-table" id ="gamelist">
@@ -101,25 +107,44 @@ html{
   /*Banner color*/
 }
 input[type=text], select,.pack {
-  width: 22%;
   height: 100%;
   padding: 12px 20px;
-  margin: 8px 0;
+  margin: 0px 0px;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+  background-color: white;
 }
 .pack{
-  width: fit-content;
+  width: 100%;
+  
 }
 
 #PackSelector {
-  max-width: fit-content;
   padding: 4px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(105, 105, 105);
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+}
+.packs {
+    display: inline-block;
+    width:25vw;
+    min-height: 100%
+}
+.inputs {
+    display: inline-block;
+    width: 70vw;
+    min-height: 100%;
+    margin-top: -10px;
 }
 
 </style>

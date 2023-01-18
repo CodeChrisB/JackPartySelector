@@ -32,7 +32,7 @@ const GAMES = Object.freeze([
     //Pack 6
     {name:"Dictionarium",pack:"6",min:3,max:8},
     {name:"Joke Boat",pack:"6",min:3,max:8},
-    {name:"Push The Button",pack:"6",min:4,max:10},
+    {name:"Push The Button",pack:"6",min:4,max:10}, 
     {name:"Role Models",pack:"6",min:3,max:6},
     {name:"Trivia Murder Party 2",pack:"6",min:1,max:8},
     //Pack 7
