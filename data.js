@@ -49,10 +49,10 @@ const GAMES = Object.freeze([
     {name:"Weapons Drawn",pack:"8",min:4,max:8},
     //Pack 9
     {name:"Fibbage 4",pack:"9",min:2,max:8},
-    {name:"Quixort",pack:"8",min:1,max:10},
-    {name:"Junktopia",pack:"8",min:3,max:8},
-    {name:"Nonsensory",pack:"8",min:3,max:8},
-    {name:"Roomerang",pack:"8",min:4,max:9},
+    {name:"Quixort",pack:"9",min:1,max:10},
+    {name:"Junktopia",pack:"9",min:3,max:8},
+    {name:"Nonsensory",pack:"9",min:3,max:8},
+    {name:"Roomerang",pack:"9",min:4,max:9},
 ])
 
 const Header = Object.freeze({name:"Name",pack:"Pack",min:"Min",max:"Max"})
