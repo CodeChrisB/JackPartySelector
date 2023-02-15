@@ -5,8 +5,8 @@ function getGameList() {
     //let packInput = document.getElementById("packInput").value
     let packs = getPacks()
     console.log('pack',packs)
-    let maxInput = document.getElementById("maxInput")?.value
-    let minInput = document.getElementById("minInput")?.value
+    //let maxInput = document.getElementById("maxInput")?.value
+    //let minInput = document.getElementById("minInput")?.value
 
     html = html
     .filter(x=>x.name.toLowerCase().includes(nameFilter)) //name
