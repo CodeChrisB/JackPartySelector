@@ -5,14 +5,14 @@ function getGameList() {
     //let packInput = document.getElementById("packInput").value
     let packs = getPacks()
     console.log('pack',packs)
-    let maxInput = document.getElementById("maxInput").value
-    let minInput = document.getElementById("minInput").value
+    let maxInput = document.getElementById("maxInput")?.value
+    let minInput = document.getElementById("minInput")?.value
 
     html = html
     .filter(x=>x.name.toLowerCase().includes(nameFilter)) //name
     .filter(x=>getPacks().includes(x.pack)) //Pack
-    .filter(x=>x.max <= maxInput) //max
-    .filter(x=>!(x.min > minInput)) //min
+    // .filter(x=>x.max <= maxInput) //max
+    // .filter(x=>!(x.min > minInput)) //min
     html = html.map(x=>getGameRow(x)) 
 
     html.unshift(getGameRow(Header))
@@ -34,10 +34,16 @@ function getPacks(){
 }
 
 function getGameRow(data){
-    return `<tr>
+    return `<tr onclick="launch('${data.url}')">
         <td>${data.name}</td>
         <td>${data.pack}</td>
         <td>${data.min}</td>
         <td>${data.max}</td>
     </tr>`
+}
+
+function launch(url){
+    console.log(url)
+    if(!url)return
+    window.location.href = url
 }

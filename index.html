@@ -36,7 +36,7 @@
       <div class="inputs">
         <div>
           <input id="nameInput"type="text" placeholder="Game" onchange="getGameList()">
-          <select  id="minInput" onchange="getGameList()">
+          <!--<select  id="minInput" onchange="getGameList()">
               <option value=999>Min Player Amount</option>
               <option value=2>Exactly 1</option>
               <option value=2>2 or less</option>
@@ -51,7 +51,8 @@
               <option value=10>10</option>
               <option value=16>16</option>
               <option value=100>100</option>
-          </select>
+          </select>-->
+          <span>Click on Row to open the Game</span>
         </div>
       </div>
       
@@ -82,6 +83,7 @@ html{
 }
 .styled-table tbody tr {
     border-bottom: 1px solid #dddddd;
+    cursor: pointer;
 }
 
 .styled-table tbody tr:nth-of-type(even) {
